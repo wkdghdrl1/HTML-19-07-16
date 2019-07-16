@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+    <style>
+        .container{
+            display: flex;
+      
+            height: 150px;
+            width: 80%;
+            background-color: green;
+            margin-bottom: 20px;
+        }
+
+        .item{
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+            color: #ddd;
+            font-size: 40px;
+            
+        }
+
+        .item:nth-child(1) {
+            background-color: #ffc448;
+        }
+        .item:nth-child(2) {
+            background-color: #ffc447;
+        }
+
+        .item:nth-child(3) {
+            background-color: blue;
+        }
+
+        .item:nth-child(4) {
+            background-color: #ff34ff;
+        }
+        .item:nth-child(5) {
+            background-color: #ff353f;
+        }
+        /* container 크기가 변할 때 item의 크기를 어떻게 할 것인가
+            0: 그대로 유지
+            1: 변동
+            단, 최소 크기는 원래보다 작지 않게
+        */
+        .container1 .item:nth-child(1){flex-shrink: 1;}
+        .container1 .item:nth-child(2){flex-shrink: 2;}
+        .container1 .item:nth-child(3){flex-shrink: 0;}
+        .container1 .item:nth-child(4){flex-shrink: 0;}
+        .container1 .item:nth-child(5){flex-shrink: 0;}
+
+        .container2 .item:nth-child(1){flex-shrink: 0;}
+        .container2 .item:nth-child(2){flex-shrink: 1;}
+        .container2 .item:nth-child(3){flex-shrink: 3;}
+        .container2 .item:nth-child(4){flex-shrink: 2;}
+        .container2 .item:nth-child(5){flex-shrink: 0;}
+
+
+    </style>
+<body>
+    <div class="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <div class="container2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+</body>
+</html>

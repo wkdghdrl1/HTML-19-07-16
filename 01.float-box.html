@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* 
+            box형 태그들 div, p 등의 tag는 width를 화면크기보다 작게 설정해도
+            그 범위가 화면의 양 끝에 모두 적용이 된다.
+            dispaly:block;으로 기본 적용된 tag들
+        */
+
+        /* 
+            box형 tag를 width를 조절하고 가로로 배치를 하기위해서 변형적으로
+            float:left라는 속성을 적용하여 배치에 성공을 했다.
+
+            그런데 float로 설정된 box가 끝나고
+            정상적인 box형태의 tag를 위치시키면
+            화면 layout이 무너지는 현상이 발생했다.
+
+            그래서
+            float 무리들이 끝나느 부분에 의미없는 box를 하나 두고
+            속성을 clear:left라고 지정을 해주어야 한다.
+            그렇다면 전체적인 레이아웃들이 다소 어색하게 나타나는 현상을
+            막을 수 없을 때도 있다. 
+        */
+        .f-box {
+            float: left;
+            border: 1px solid blue;
+            width: 200px;
+            height: 100px;
+            margin: 1rem;
+        }
+        .clear{
+            clear :left;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="f-box">공중부양 box</div>
+    <div class="clear"></div>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero doloribus laborum ipsam laudantium corporis saepe
+        aliquid quibusdam voluptatibus ad perspiciatis, amet facere quia impedit? Veniam eius iste minima ullam aliquid.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam placeat amet maiores atque recusandae maxime
+        repudiandae magni architecto id, et minus aspernatur repellendus fugiat laudantium! Voluptatum voluptate quidem
+        animi voluptates.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos impedit atque hic, dolor culpa
+        architecto tenetur, neque quidem, optio sunt minus cupiditate commodi laudantium iure odio. Molestias, eligendi
+        officiis!
+    </p>
+</body>
+
+</html>
